@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}create{% endblock title %}
+{% block body %}
+<div class="container py-3 bg-theme-dark">
+ <form method="post" action='/create/'>
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1 email" name='email' aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1 name" name='name' aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Blog Title</label>
+      <input type="text" class="form-control" id="exampleInputEmail1 email" name='title' aria-describedby="emailHelp">
+  </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Blog</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1 blog" name="blog" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Image</label>
+        <input type="imga" class="form-control" id="exampleInputEmail1 image" name='image' placeholder="Enter image Url" aria-describedby="emailHelp">
+    </div>
+   
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> 
+</div>
+{% endblock body %}

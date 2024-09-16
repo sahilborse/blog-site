@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}{{ blog.name }}{% endblock title %}
+
+{% block style %}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f7fa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.blog-header h1 {
+  font-size: 3rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.blog-header h2 {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.blog-header img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.blog-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #495057;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.blog-content img {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-left: 5px solid #007bff;
+  margin-bottom: 20px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.author-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.author-info h5 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.author-info small {
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  .blog-header h1 {
+    font-size: 2.2rem;
+  }
+  .blog-header h2 {
+    font-size: 1.2rem;
+  }
+  .blog-content h2 {
+    font-size: 1.7rem;
+  }
+}
+{% endblock style %}
+
+{% block body %}
+<div class="container">
+    <div class="blog-header">
+        <h1>{{ blog.name }}</h1>
+        <h2>{{ blog.title }}</h2>
+        <img src="{{ blog.image }}" alt="{{ blog.name }}">
+    </div>
+    <div class="blog-content">
+        <p>{{ blog.blog }}</p>
+    </div>
+
+</div>
+{% endblock body %}
