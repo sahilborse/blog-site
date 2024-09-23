@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ps)hrd(vq=1uf#hudwr=qg4u4((#wf208kgvqsdv2ha4+&(p8x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # apply site url when site is hosted here in [] brackets.
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['your-app-name.onrender.com', 'localhost']
 
 
 # Application definition
